@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "run helloWorld function",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceRoot}\\sls",
+            "windows": {
+                "program": "${workspaceFolder}\\node_modules\\serverless\\bin\\serverless"
+            },
+            "args": [
+                "invoke",
+                "local",
+                "-f",
+                "helloWorld",
+                "--path",
+                "event.json"
+            ],
+            "env": {
+                "PARAMETER_STORE_FOLDER_NAME": "hackathon",
+                "AWS_PROFILE": "hackathon"
+            }
+        }
+    ]
+}
