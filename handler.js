@@ -37,8 +37,7 @@ function getParameters() {
 
 function helloWorld(params, context, callback) {
   // the following line is critical for performance reasons to allow re-use of database connections across calls
-  // to this Lambda function and avoid closing the database connection. The first call to this lambda function
-  // takes about 5 seconds to complete, while subsequent, close calls will only take a few hundred milliseconds.
+  // to this Lambda function and avoid closing the database connection
   context.callbackWaitsForEmptyEventLoop = false;
 
   try {
@@ -78,5 +77,5 @@ function showCollections(db, callback) {
   });
 
   //we don't need to close the connection thanks to context.callbackWaitsForEmptyEventLoop = false (above)
-  //this will let our function re-use the connection on the next called (if it can re-use the same Lambda container)
+  //this will let our function re-use the connection (if it can re-use the same Lambda container)
 };
