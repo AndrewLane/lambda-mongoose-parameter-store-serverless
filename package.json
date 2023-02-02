@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/AndrewLane/lambda-mongoose-parameter-store-serverless#readme",
   "devDependencies": {
-    "serverless": "^1.83.3"
+    "serverless": "^3.27.0"
   },
   "dependencies": {
     "aws-sdk": "^2.814.0",
